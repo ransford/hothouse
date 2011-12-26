@@ -19,6 +19,7 @@ void setup(void)
 
   // Start up the library
   sensors.begin();
+  sensors.setResolution(12);
 
   pinMode(13, OUTPUT); // LED on Uno pin 13
 }
@@ -33,5 +34,7 @@ void loop(void)
 
   Serial.print("Temperature: ");
   Serial.println(sensors.getTempFByIndex(0));
+
+  delay(5000);
 }
 
