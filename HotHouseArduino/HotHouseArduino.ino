@@ -15,7 +15,6 @@ void setup(void)
 {
   // start serial port
   Serial.begin(9600);
-  Serial.println("Dallas Temperature IC Control Library Demo");
 
   // Start up the library
   sensors.begin();
@@ -32,7 +31,6 @@ void loop(void)
   sensors.requestTemperatures(); // Send the command to get temperatures
   digitalWrite(13, LOW);
 
-  Serial.print("Temperature: ");
   Serial.println(sensors.getTempFByIndex(0));
 
   delay(5000);
